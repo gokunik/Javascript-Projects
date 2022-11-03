@@ -5,15 +5,16 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) &nbsp;
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) &nbsp;
 
-Check projects here - [Projects]()
+Check projects here - [Projects](https://gokunik.github.io/Javascript-Projects/)
 
 #### Projects in the repo
 
 <ul>
     <li>
         <details>
-            <summary>Todo Application using Javascript - <a href="./TODO">Link</a></summary>
-            <img src="images/todoApp.png">
+            <summary>Todo Application using Javascript - <a href="./TODO/index.html">Link</a></summary>
+            <p><a href="https://gokunik.github.io/Javascript-Projects/TODO/index.html"> Live Link to project </a></p>
+            <img src="images/todoApp.png" width="400px">
         </details>
     </li>
 </ul>
