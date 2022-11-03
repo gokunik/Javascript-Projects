@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <meta name="description" content="Javascript Todo application with local storage support">
+
+    <!-- icons cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- boostrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+
+</head>
+
+<body>
+    <div class="alert">
+        <p id="message"></p>
+        <button class="btn" title="Close" onclick="this.parentElement.classList.remove('show')" type="button">
+            <i style="line-height: none;" class="bi bi-x-circle"></i>
+        </button>
+
+    </div>
+    <main class="container wrapper">
+        <header class="todoHeader shadow-sm">
+            <h2 class="mb-0">
+                Todo List
+            </h2>
+        </header>
+        <section class="todoContainer  shadow-sm">
+            <p id="pHide" class="text-center hide">Todo list empty</p>
+            <!-- Template for todo -->
+            <div class="disabled todoTemplate">
+                <li class="todoItem mb-2">
+                    <input onclick="toggleStatus(event)" type="checkbox" name="status" id="status">
+                    <p id="todoText" data-bs-toggle="collapse" data-counter="" data-bs-target=""></p>
+                    <span class="priority"></span>
+                    <button id="" class="btn" title="Delete todo" type="button" style="margin-left: auto;"
+                        onclick="deleteTodo(event)">
+                        <i style="line-height: none;" class="bi bi-trash3"></i>
+                    </button>
+                </li>
+                <div id="" class="collapse"
+                    style="padding:.3rem; border: 1px solid rgb(101, 100, 100); border-top:none; word-break: break-all;">
+                    <p style="font-size: 14px;" class="mb-1"></p>
+                    <p> <strong>Due date:</strong>
+                        <input type="text" 
+                            style="appearance: none; font-size: 12px; background-color:white; border:none; outline:none; width: 100px;"
+                            disabled value="">
+                    </p>
+                </div>
+            </div>
+
+            <ul class="todoBox"></ul>
+
+            <button type="button" id="showModal" class="addTodo shadow-sm"> + New Task</button>
+        </section>
+    </main>
+
+    <!-- This modal will pop up when new task is clicked -->
+        <section class="todoModal todoContainer d-flex flex-column gap-2">
+            <h3 class="modalHeader">Todo Details</h3>
+            <input class="todoName " type="text" name="todoName" id="todoName" placeholder="Todo" autofocus>
+            <textarea class="todoDesc" name="todoDesc" id="todoDesc" cols="30" rows="1"
+                placeholder="Add description"></textarea>
+    
+            <label class="d-flex align-items-center gap-3" for="date">Select date:
+                <input type="date" name="todoDate" id="todoDate" value="none">
+            </label>
+    
+            <select class="todoPriority" name="priority" id="todoPriority" required>
+                <option value="4" selected>Select task Priority </option>
+                <option value="1">High </option>
+                <option value="2">Medium</option>
+                <option value="3">Low</option>
+            </select>
+    
+            <button id="addTodo" class="addTodo" type="button">Add Todo</button>
+    
+            <button type="button" id="closeModalBtn"><i style="line-height: none;" class="bi bi-x-circle"></i></button>
+    
+        </section>
+</body>
+
+</html>
